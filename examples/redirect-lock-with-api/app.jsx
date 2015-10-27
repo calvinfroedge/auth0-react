@@ -5,7 +5,7 @@ var App = React.createClass({
     this.setState({idToken: this.getIdToken()})
   },
   createLock: function() {
-    this.lock = new Auth0Lock(this.props.clientId, this.props.domain);
+    this.lock = new Auth0Lock({clientID: this.props.clientId, domain: this.props.domain});
   },
   setupAjax: function() {
     $.ajaxSetup({
